@@ -159,6 +159,35 @@ footer .gold { color: var(--gold); }
   main { padding: 2rem 1.25rem 4rem; }
   .toc { padding: 1rem 1.25rem 0; }
 }
+
+.dates-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+.dates-table th,
+.dates-table td {
+  padding: 0.5rem 0.65rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(63,107,92,0.2);
+}
+.dates-table th {
+  color: var(--celadon);
+  font-weight: 500;
+  font-family: 'Noto Serif TC', 'Noto Serif CJK TC', serif;
+  letter-spacing: 0.06em;
+}
+.dates-table td:first-child {
+  color: var(--indigo-deep);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.dates-table tr:last-child td { border-bottom: none; }
+@media (max-width: 600px) {
+  .dates-table th,
+  .dates-table td { padding: 0.45rem 0.4rem; font-size: 0.9rem; }
+}
 </style>
 </head>
 <body>
@@ -228,9 +257,16 @@ footer .gold { color: var(--gold); }
     when: "<strong>三九天</strong>：即冬至之後，一年之中最寒冷嘅一段時間，分一九、二九、三九。依「夏病冬治」之理，於寒氣盛時貼敷穴位，調理夏季易發或加重嘅病症。",
     dates: `<div class="highlight">
       <p><strong>2026年三九天灸時間：</strong></p>
-      <p>一九：2026年12月22日，星期二</p>
-      <p>二九：2026年12月31日，星期四</p>
-      <p>三九：2027年1月9日，星期六</p>
+      <table class="dates-table">
+        <thead>
+          <tr><th>節次</th><th>日期</th><th>星期</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>一九</td><td>2026年12月22日</td><td>星期二</td></tr>
+          <tr><td>二九</td><td>2026年12月31日</td><td>星期四</td></tr>
+          <tr><td>三九</td><td>2027年1月9日</td><td>星期六</td></tr>
+        </tbody>
+      </table>
     </div>`,
     principle: "夏病冬治"
   };
