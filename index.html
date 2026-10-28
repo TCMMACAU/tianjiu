@@ -210,7 +210,8 @@ footer .gold { color: var(--gold); }
 
   // May 1 – Oct 31: 三伏（冬病夏治）
   // Nov 1 – Apr 30: 三九（夏病冬治）
-  const isSanFu = (month >= 5 && month <= 10);
+  // 2026 季：強制顯示三九／夏病冬治（含 2026 三九日期）
+  const isSanFu = false; // was: (month >= 5 && month <= 10)
 
   const content = isSanFu ? {
     title: "三伏天 · 天灸",
@@ -227,7 +228,7 @@ footer .gold { color: var(--gold); }
     intro: "轉眼三九天就到，冬天感覺越來越濃。與其喺寒冷入面一味躲避，不如試下順應節氣，畀身體一次深層調理。一齊養生。",
     when: "<strong>三九天</strong>：即冬至之後，一年之中最寒冷嘅時間。",
     dates: `<div class="highlight">
-      <p><strong>本年度三九日期：</strong></p>
+      <p><strong>2026年三九天灸時間：</strong></p>
       <p>一九：2026年12月22日，星期二</p>
       <p>二九：2026年12月31日，星期四</p>
       <p>三九：2027年1月9日，星期六</p>
