@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>天灸療法 · 三九 / 三伏 | 鏡湖醫院</title>
-<meta name="description" content="鏡湖醫院天灸療法 · 冬病夏治 / 夏病冬治。甚麼是天灸、適用疾病、敷貼時間同注意事項。">
+<meta name="description" content="鏡湖醫院天灸療法 · 夏病冬治。甚麼是天灸、適用疾病、敷貼時間同注意事項。">
 <meta name="theme-color" content="#1A2834">
 <meta property="og:title" content="天灸療法 · 鏡湖醫院中醫部">
-<meta property="og:description" content="順應節氣 · 冬病夏治 / 夏病冬治">
+<meta property="og:description" content="順應節氣 · 夏病冬治">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tcmmacau.github.io/tianjiu/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231A2834'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%23C5A880' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%233F6B5C'/%3E%3C/svg%3E">
@@ -193,13 +193,13 @@ footer .gold { color: var(--gold); }
 <main id="content">
   <!-- Content injected by JS; fallback below for no-JS / crawl -->
   <section id="intro">
-    <p>天灸療法按農曆於夏天或冬天特定時間，以中藥貼敷特定穴位，用以調理若干慢性病。五月至十月為三伏（冬病夏治），十一月至四月為三九（夏病冬治）。</p>
+    <p>天灸療法按農曆於夏天或冬天特定時間，以中藥貼敷特定穴位，用以調理若干慢性病。而家以三九（夏病冬治）為主；三伏季節內容暫不顯示。</p>
   </section>
 </main>
 
 <footer>
   <p>鏡湖醫院 · 中醫部</p>
-  <p style="margin-top:0.5rem;"><span class="gold">天灸療法</span> · 冬病夏治 / 夏病冬治</p>
+  <p style="margin-top:0.5rem;"><span class="gold">天灸療法</span> · 夏病冬治</p>
   <p style="margin-top:0.75rem;font-size:0.75rem;opacity:0.75;">本頁供市民了解流程，不能取代面診或個人化醫囑。</p>
 </footer>
 
@@ -208,25 +208,24 @@ footer .gold { color: var(--gold); }
   const now = new Date();
   const month = now.getMonth() + 1; // 1-12
 
-  // May 1 – Oct 31: 三伏（冬病夏治）
-  // Nov 1 – Apr 30: 三九（夏病冬治）
+  // Forced 三九／夏病冬治 (seasonal auto-switch paused)
   // 2026 季：強制顯示三九／夏病冬治（含 2026 三九日期）
   const isSanFu = false; // was: (month >= 5 && month <= 10)
 
   const content = isSanFu ? {
     title: "三伏天 · 天灸",
-    subtitle: "有件事要趁熱做 · 冬病夏治",
-    badge: "三伏天 · 冬病夏治",
+    subtitle: "有件事要趁熱做 · 夏病冬治",
+    badge: "三伏天 · 夏病冬治",
     intro: "轉眼三伏天就到，夏天感覺越來越濃。與其喺酷熱入面一味躲避，不如試下順應節氣，畀身體一次深層清潔。一齊養生。",
     when: "<strong>三伏天</strong>：即農曆「小暑」同「處暑」兩個節氣之間，一年之中氣溫最高、最悶熱嘅一段時間。",
     dates: "",
-    principle: "冬病夏治"
+    principle: "夏病冬治"
   } : {
     title: "三九天 · 天灸",
     subtitle: "有件事要趁寒做 · 夏病冬治",
     badge: "三九天 · 夏病冬治",
     intro: "轉眼三九天就到，冬天感覺越來越濃。與其喺寒冷入面一味躲避，不如試下順應節氣，畀身體一次深層調理。一齊養生。",
-    when: "<strong>三九天</strong>：即冬至之後，一年之中最寒冷嘅時間。",
+    when: "<strong>三九天</strong>：即冬至之後，一年之中最寒冷嘅一段時間，分一九、二九、三九。依「夏病冬治」之理，於寒氣盛時貼敷穴位，調理夏季易發或加重嘅病症。",
     dates: `<div class="highlight">
       <p><strong>2026年三九天灸時間：</strong></p>
       <p>一九：2026年12月22日，星期二</p>
