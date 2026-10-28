@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>天灸療法 · 三九 · 夏病冬治 | 鏡湖醫院</title>
-<meta name="description" content="鏡湖醫院天灸療法 · 夏病冬治。甚麼是天灸、適用疾病、敷貼時間同注意事項。">
+<title>天灸療法 | 鏡湖醫院</title>
+<meta name="description" content="鏡湖醫院天灸療法介紹：包括三伏天灸（冬病夏治）同三九天灸（夏病冬治）。甚麼是天灸、適用疾病、敷貼時間同注意事項。">
 <meta name="theme-color" content="#1A2834">
 <meta property="og:title" content="天灸療法 · 鏡湖醫院中醫部">
-<meta property="og:description" content="順應節氣 · 夏病冬治">
+<meta property="og:description" content="天灸療法：三伏天灸 · 冬病夏治；三九天灸 · 夏病冬治。順應節氣 · 調理身心。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tcmmacau.github.io/tianjiu/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231A2834'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%23C5A880' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%233F6B5C'/%3E%3C/svg%3E">
@@ -76,9 +76,15 @@ h1 {
   margin: 1.5rem auto 0;
   opacity: 0.6;
 }
+.season-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
 .season-badge {
   display: inline-block;
-  margin-top: 1rem;
   padding: 0.4rem 1rem;
   border: 1px solid var(--gold);
   border-radius: 2px;
@@ -121,6 +127,14 @@ section h2 {
   padding-bottom: 0.6rem;
   border-bottom: 1px solid rgba(63,107,92,0.25);
 }
+section h3 {
+  font-family: 'Noto Serif TC', 'Noto Serif CJK TC', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--celadon);
+  letter-spacing: 0.06em;
+  margin: 1.5rem 0 0.75rem;
+}
 section p, section li { font-size: 1rem; margin-bottom: 0.9rem; }
 .highlight {
   background: var(--rice);
@@ -137,13 +151,6 @@ section p, section li { font-size: 1rem; margin-bottom: 0.9rem; }
   color: var(--celadon);
   margin-bottom: 0.4rem;
   font-weight: 500;
-}
-.noscript {
-  max-width: 720px;
-  margin: 2rem auto;
-  padding: 1rem 1.5rem;
-  background: var(--rice);
-  border-left: 3px solid var(--gold);
 }
 footer {
   background: var(--indigo);
@@ -195,10 +202,13 @@ footer .gold { color: var(--gold); }
 <header>
   <div class="header-inner">
     <div class="logo-mark">鏡湖醫院 · 中醫部</div>
-    <h1 id="main-title">天灸療法</h1>
-    <p class="subtitle" id="main-subtitle">順應節氣 · 調理身心</p>
+    <h1>天灸療法</h1>
+    <p class="subtitle">順應節氣 · 調理身心</p>
     <div class="divider"></div>
-    <div class="season-badge" id="season-badge">載入中…</div>
+    <div class="season-badges" aria-label="天灸兩季">
+      <span class="season-badge">三伏天灸 · 冬病夏治</span>
+      <span class="season-badge">三九天灸 · 夏病冬治</span>
+    </div>
   </div>
 </header>
 
@@ -213,77 +223,23 @@ footer .gold { color: var(--gold); }
   <a href="#care">注意事項</a>
 </nav>
 
-<noscript>
-  <div class="noscript">
-    <p>請開啟 JavaScript，以顯示三九 · 夏病冬治完整內容。以下為簡要說明。</p>
-  </div>
-</noscript>
-
 <main id="content">
-  <!-- Content injected by JS; fallback below for no-JS / crawl -->
   <section id="intro">
-    <p>三九天寒。天灸按農曆於冬天特定時間（三九天）以中藥貼敷特定穴位，用以調理若干慢性病。而家正值<strong>三九 · 夏病冬治</strong>，有件事要趁寒做。</p>
-  </section>
-</main>
-
-<footer>
-  <p>鏡湖醫院 · 中醫部</p>
-  <p style="margin-top:0.5rem;"><span class="gold">天灸療法</span> · 夏病冬治</p>
-  <p style="margin-top:0.75rem;font-size:0.75rem;opacity:0.75;">本頁供市民了解流程，不能取代面診或個人化醫囑。</p>
-</footer>
-
-<script>
-(function () {
-  const now = new Date();
-  const month = now.getMonth() + 1; // 1-12
-
-  // Forced 三九／夏病冬治 (seasonal auto-switch paused)
-  // 2026 季：強制顯示三九／夏病冬治（含 2026 三九日期）
-  const isSanFu = false; // was: (month >= 5 && month <= 10)
-
-  const content = isSanFu ? {
-    title: "三伏天 · 天灸",
-    subtitle: "有件事要趁熱做 · 夏病冬治",
-    badge: "三伏天 · 夏病冬治",
-    intro: "轉眼三伏天就到，夏天感覺越來越濃。與其喺酷熱入面一味躲避，不如試下順應節氣，畀身體一次深層清潔。一齊養生。",
-    when: "<strong>三伏天</strong>：即農曆「小暑」同「處暑」兩個節氣之間，一年之中氣溫最高、最悶熱嘅一段時間。",
-    dates: "",
-    principle: "夏病冬治"
-  } : {
-    title: "三九天 · 天灸",
-    subtitle: "有件事要趁寒做 · 夏病冬治",
-    badge: "三九天 · 夏病冬治",
-    intro: "三九天寒，冬天感覺越來越濃。有件事要趁寒做——夏病冬治。與其喺寒冷入面一味躲避，不如試下順應節氣，畀身體一次深層調理。一齊養生。",
-    when: "<strong>三九天</strong>：即冬至之後，一年之中最寒冷嘅一段時間，分一九、二九、三九。依「夏病冬治」之理，於寒氣盛時貼敷穴位，調理夏季易發或加重嘅病症。",
-    dates: `<div class="highlight">
-      <p><strong>2026年三九天灸時間：</strong></p>
-      <table class="dates-table">
-        <thead>
-          <tr><th>節次</th><th>日期</th><th>星期</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>一九</td><td>2026年12月22日</td><td>星期二</td></tr>
-          <tr><td>二九</td><td>2026年12月31日</td><td>星期四</td></tr>
-          <tr><td>三九</td><td>2027年1月9日</td><td>星期六</td></tr>
-        </tbody>
-      </table>
-    </div>`,
-    principle: "夏病冬治"
-  };
-
-  document.getElementById("main-title").textContent = content.title;
-  document.getElementById("main-subtitle").textContent = content.subtitle;
-  document.getElementById("season-badge").textContent = content.badge;
-  document.title = content.title + " | 鏡湖醫院";
-
-  document.getElementById("content").innerHTML = `
-  <section id="intro">
-    <p>${content.intro}</p>
+    <p>天灸療法按農曆於夏天或冬天特定時間，以中藥貼敷特定穴位，用以調理若干慢性病。全年主要分兩季：夏天<strong>三伏天灸 · 冬病夏治</strong>，冬天<strong>三九天灸 · 夏病冬治</strong>。與其一味躲避酷熱或嚴寒，不如試下順應節氣，畀身體一次深層調理。一齊養生。</p>
   </section>
 
   <section id="what">
     <h2>甚麼是天灸療法？</h2>
     <p>天灸療法是指按中國曆法（農曆），於夏天或冬天嘅特定時間，以特定中藥貼敷在<strong>特定穴位</strong>上，用以<strong>治療若干慢性疾病</strong>嘅方法。</p>
+    <p>天灸療法包括：</p>
+    <div class="highlight">
+      <p><strong>三伏天灸 · 冬病夏治</strong><br>
+      於夏天最熱嘅<strong>三伏天</strong>貼敷，依「冬病夏治」之理，趁暑熱陽氣盛時調理冬季易發或加重嘅病症。</p>
+    </div>
+    <div class="highlight">
+      <p><strong>三九天灸 · 夏病冬治</strong><br>
+      於冬天最冷嘅<strong>三九天</strong>貼敷，依「夏病冬治」之理，趁寒氣盛時調理夏季易發或加重嘅病症。</p>
+    </div>
   </section>
 
   <section id="indications">
@@ -308,11 +264,39 @@ footer .gold { color: var(--gold); }
 
   <section id="when">
     <h2>天灸甚麼時候做？</h2>
+    <p>天灸按農曆節氣進行，每年具體日期另行公布；以下為兩季說明。</p>
+
+    <h3 id="when-sanfu">三伏天灸 · 冬病夏治</h3>
     <div class="highlight">
-      <p>${content.when}</p>
+      <p><strong>三伏天</strong>：即農曆「小暑」同「處暑」兩個節氣之間，一年之中氣溫最高、最悶熱嘅一段時間，分初伏、中伏、末伏。</p>
     </div>
-    ${content.dates || ""}
-    <p>而家正值<strong>${content.principle}</strong>時機。</p>
+    <p>每年三伏天灸時間待定，按農曆另行公布。</p>
+    <table class="dates-table" aria-label="三伏天灸時間">
+      <thead>
+        <tr><th>節次</th><th>日期</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>初伏</td><td>待定</td></tr>
+        <tr><td>中伏</td><td>待定</td></tr>
+        <tr><td>末伏</td><td>待定</td></tr>
+      </tbody>
+    </table>
+
+    <h3 id="when-sanjiu">三九天灸 · 夏病冬治</h3>
+    <div class="highlight">
+      <p><strong>三九天</strong>：即冬至之後，一年之中最寒冷嘅一段時間，分一九、二九、三九。</p>
+    </div>
+    <p>每年三九天灸時間待定，按農曆另行公布。</p>
+    <table class="dates-table" aria-label="三九天灸時間">
+      <thead>
+        <tr><th>節次</th><th>日期</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>一九</td><td>待定</td></tr>
+        <tr><td>二九</td><td>待定</td></tr>
+        <tr><td>三九</td><td>待定</td></tr>
+      </tbody>
+    </table>
   </section>
 
   <section id="herbs">
@@ -352,8 +336,13 @@ footer .gold { color: var(--gold); }
       <p>天灸宜連續做至少三年或更長，療效更佳。</p>
     </div>
   </section>
-  `;
-})();
-</script>
+</main>
+
+<footer>
+  <p>鏡湖醫院 · 中醫部</p>
+  <p style="margin-top:0.5rem;"><span class="gold">天灸療法</span> · 三伏 · 三九</p>
+  <p style="margin-top:0.75rem;font-size:0.75rem;opacity:0.75;">本頁供市民了解流程，不能取代面診或個人化醫囑。</p>
+</footer>
+
 </body>
 </html>
