@@ -225,6 +225,46 @@ footer .gold { color: var(--gold); }
   padding-bottom: 0.6rem;
   border-bottom: 1px solid rgba(63,107,92,0.25);
 }
+
+.booking-cta {
+  margin: 2.5rem 0 0;
+  padding: 1.75rem 1.5rem;
+  background: var(--rice);
+  border: 1px solid rgba(63,107,92,0.28);
+  border-radius: 8px;
+  text-align: center;
+}
+.booking-cta h2 {
+  font-family: 'Noto Serif TC', 'Noto Serif CJK TC', serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--indigo-deep);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.booking-cta p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+.booking-cta a.booking-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.55rem 1.6rem;
+  background: var(--celadon);
+  color: var(--cream);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  transition: background 0.2s ease;
+}
+.booking-cta a.booking-btn:hover { background: var(--indigo-deep); }
+
 </style>
 </head>
 <body>
@@ -252,6 +292,7 @@ footer .gold { color: var(--gold); }
   <a href="#sensitive">敏感肌</a>
   <a href="#duration">敷貼時間</a>
   <a href="#care">注意事項</a>
+  <a href="#booking">網上預約</a>
 </nav>
 
 <main id="content">
@@ -387,6 +428,12 @@ footer .gold { color: var(--gold); }
     <div class="highlight">
       <p>天灸宜連續做至少三年或更長，療效更佳。</p>
     </div>
+  </section>
+
+  <section id="booking" class="booking-cta" aria-label="網上預約掛號">
+    <h2>網上預約掛號</h2>
+    <p>可透過鏡湖通網頁版辦理預約掛號。體質各異，天灸宜先經面診評估。</p>
+    <a class="booking-btn" href="https://app.kwh.org.mo/v3/#/" target="_blank" rel="noopener">前往網上預約</a>
   </section>
 </main>
 
